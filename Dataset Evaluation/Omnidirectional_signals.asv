@@ -1,0 +1,104 @@
+%% Loading the .wav file
+
+clear;
+clc;
+
+filename = 'speaker1.wav';
+
+[signal, sampleRate] = audioread(filename);
+
+%% Checking the number of channels on the file
+
+numChannels = size(signal, 2);
+
+fprintf('Number of channels: %d\n', numChannels);
+
+%% Omnidirectional measured signal
+
+selectedChannels = signal(:, 1:6);
+
+omnidirectionalSignalm = sum(selectedChannels, 2);
+
+omnidirectionalSignalNormalized = normalize(omnidirectionalSignalm, 'range', [-1, 1]);
+
+% figure;
+% subplot(2, 1, 1);
+% plot(signal);
+% title('Sound Pressure Signals from Different Directions');
+% xlabel('Sample');
+% ylabel('Amplitude');
+% 
+% subplot(2, 1, 2);
+% plot(omnidirectionalSignal);
+% title('Omnidirectional Signal');
+% xlabel('Sample');
+% ylabel('Amplitude');
+
+
+
+
+%% Omnidirectional simulated signal
+
+rirDataFile = 'RIR.mat';
+rirData = load(rirDataFile);
+rirVariableNames = fieldnames(rirData);
+
+reverbSpeechSignal = signal(:, end-1:end);
+
+omnidirectionalSignal = zeros(863710, 1); 
+
+reverbSpeechColumns = sum(reverbSpeechSignal, 2);
+
+numConvolvedSignals = 0;
+
+for i = 1:numel(rirVariableNames)
+    rir = rirData.(rirVariableNames{i});
+    for j = 1:12
+        rirval1 = rir{j,1};
+        for k = 1:6
+            rircolumn = rirval1(:,k);
+            startRow = 370;
+            endRow = 50000;
+            truncatedVector = rircolumn(startRow:endRow);
+            convolvedSignal = conv(reverbSpeechColumns, truncatedVector);
+            convolvedSignal = convolvedSignal / max(abs(convolvedSignal));
+            numConvolvedSignals = numConvolvedSignals + 1;
+            omnidirectionalSignal = omnidirectionalSignal + convolvedSignal;
+        end
+    end
+end
+
+omnidirectionalSignal = omnidirectionalSignal/numConvolvedSignals;
+
+%%
+
+%sound(omnidirectionalSignal, sampleRate);
+%sound(convolvedSignal, sampleRate);
+rirDataFile = 'RIR.mat';
+load(rirDataFile);
+plot(rir{1,1});
+
+%%
+sound(omnidirectionalSignalNormalized, sampleRate);
+
+%%
+
+outputFileName = 'omnidirectional_simulated_2trunc1.wav';
+
+% Specify the sample rate (assuming it is the same as the original signal)
+sampleRate = 48000;  % Change this if your sample rate is different
+
+% Save the omnidirectionalSignal as a .wav file
+audiowrite(outputFileName, omnidirectionalSignal, sampleRate);
+
+%%
+
+measuredHead = signal(:, end-1:end);
+
+outputFileName = 'measured_speaker1.wav';
+
+Fs = 48000;
+
+sound(measuredHead, )
+
+audiowrite(outputFileName, reverbSpeechSignal, Fs);
