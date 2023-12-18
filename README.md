@@ -7,7 +7,7 @@ Peeters Emile, Schockaert Emile, Narekuli Ashwath, Van Cauwelaert Joeri, Sharma 
 Contains 24 directories, 12 directories for each position with speaker 1 and 12 directories for each position with speaker 2, 'speakerX_posY'.<br />
 Each of these directories contain the 6 measurements (wav and pkf) corresponding to each mic of the vector probe (A till F).
 - #### [Continuous_measurements](Dataset/Continuous_measurements)
-Contains the used sound file ([sound_file.wav](Dataset/Discrete_measurements/sound_file.wav)) and 2 directories 'speakerX_continuous' containing the wav, csv and xlsx files of the measurement for speaker 1 and 2. The latter files hold the times,positions and speeds data.
+Contains the used sound file ([sound_file.wav](Dataset/Continuous_measurements/sound_file.wav)) and 2 directories 'speakerX_continuous' containing the wav, csv and xlsx files of the measurement for speaker 1 and 2. The latter files hold the times,positions and speeds data.
 
 ## MEASUREMENTS SETUP
 The figure below displays the measurements setup. Two speakers and a railway are used, on the railway a cart is placed with the Neumann KU 100 dummy head and the GRAS 50VI-1 Vector intensity probe ontop of it. Speaker 1 is placed 0,5m away from the end of the railway, facing in the direction of the railway. Speaker 2 is positioned perpendicular to the railway. It is placed in the middle of the railway and 2m from it.<br />
@@ -36,3 +36,7 @@ Be aware that the microphone array and head are placed above eachother, for visu
 
 
 ## Sources
+- Farina, A. (2000). Simultaneous measurement of impulse re-sponse and distortion with a swept-sine technique. Journal of The Audio Engineering Society.
+- Farina, A. (2007). Advancements in impulse response measurements by sine sweeps. Journal of The Audio EngineeringSociety.
+- GRAS (2014). Instruction manual vector intensity probe type 50vi-1 (wide-band intensity probe type 50vi-3). GRAS https://www.grasacoustics.com/files/m/a/man_50VI-1.pdf
+- Neumann, G. (2020). Operating instructions ku 100. Neumann https://www.neumann.com/en-en/file-finder/?productName=KU+100
