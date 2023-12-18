@@ -4,7 +4,7 @@ Peeters Emile, Schockaert Emile, Narekuli Ashwath, Van Cauwelaert Joeri, Sharma 
 
 ## [Dataset](Dataset)
 - #### [Discrete_measurements](Dataset/Discrete_measurements)
-Contains 24 directories, 12 directories for each position with speaker 1 and 12 directories for each position with speaker 2, 'speakerX_posY'.<br />
+Contains 24 directories, 12 directories for each position with speaker 1 and 12 directories for each position with speaker 2, 'speakerX_posY'.
 Each of these directories contain the 6 measurements (wav and pkf) corresponding to each mic of the vector probe (A till F).
 - #### [Continuous_measurements](Dataset/Continuous_measurements)
 Contains the used sound file ([sound_file.wav](Dataset/Continuous_measurements/sound_file.wav)) and 2 directories 'speakerX_continuous' containing the wav, csv and xlsx files of the measurement for speaker 1 and 2. The latter files hold the times,positions and speeds data.
