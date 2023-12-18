@@ -22,4 +22,17 @@ To clarify, the microphone array consisted of six microphones, in each direction
 Be aware that the microphone array and head are placed above eachother, for visualisation reasons they are placed in front of eachother.
 
 <!-- ![Screenshot](./images/measurement_setup.jpg | width=100) -->
-<img src="./images/measurement_setup.jpg" alt="Screenshot" width="700"/>
+<div style="text-align:center">
+  <img src="./images/measurement_setup.jpg" alt="Screenshot" width="700"/>
+  <p>Figure 1: Measurement Setup</p>
+</div>
+
+
+<div style="text-align:center">
+  <img src="./images/micArray.png" alt="micArray" width="300" style="margin-right:20px;"/>
+  <img src="./images/dummyHead.png" alt="dummyHead" width="300"/>
+  <p>Figure 2: GRAS 50VI-1 Vector intensity probe and Neumann KU 100 dummy head</p>
+</div>
+
+
+## Sources
