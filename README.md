@@ -1,5 +1,6 @@
-# SPAI
-SPAI Team 4
+# SPAI project: Helixon challenge
+SPAI KUL Team 4
+Peeters Emile, Schockaert Emile, Narekuli Ashwath, Van Cauwelaert Joeri, Sharma Subash, Nematli Javad
 
 ## SETUP MEASUREMENTS
 2 speakers
