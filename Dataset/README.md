@@ -1,4 +1,4 @@
-## [Dataset](Dataset)
+# Dataset
 - #### [Discrete_measurements](../Dataset/Discrete_measurements)
 Contains 24 directories, 12 directories for each position with speaker 1 and 12 directories for each position with speaker 2, 'speakerX_posY'.<br />
 Each of these directories contain the 6 measurements (wav and pkf) corresponding to each mic of the vector probe (A till F).
@@ -12,7 +12,7 @@ The figure below displays the measurements setup. Two speakers and a railway are
 - For the discrete measurements (see [Discrete_measurements](../Dataset/Discrete_measurements)), the cart was placed on discrete positions on the railway, going from 0m to 2.2m from the right side, indicated by number 1 till 12. Each position is 20cm apart, therefore a small spatial resolution was obtained. In these measurements, the speaker emitted an exponential sine sweep (ESS), as of Farina’s formulation, to be later converted to RIRs. These were recorded by the microphone array, so 6x12x2 (6 mics, 12 positions for 2 speakers) measurements.<br />
 
 ### Continuous measurements
-- For the continuous measurement see [Continuous_measurements](../Dataset/Continuous_measurements), both the head and vector probe microphones were used. In this case the cart was moving from position 1 to position 12 at a speed of 1km/h. This was also done by speaker 1 and speaker 2 separately, therefore four measurements were obtained.<br />
+- For the continuous measurement (see [Continuous_measurements](../Dataset/Continuous_measurements)), both the head and vector probe microphones were used. In this case the cart was moving from position 1 to position 12 at a speed of 1km/h. This was also done by speaker 1 and speaker 2 separately, therefore four measurements were obtained.<br />
 
 To clarify, the microphone array consisted of six microphones, in each direction one, so for each measurement of the microphone array, there are actually six measurements. The head consists of two microphones, one for the left and one for the right ear, so for every measurement for the head, there are actually two measurements.<br />
 Be aware that the microphone array and head are placed above eachother, for visualisation reasons they are placed in front of eachother.
