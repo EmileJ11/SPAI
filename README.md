@@ -18,7 +18,6 @@ The figure below displays the measurements setup. Two speakers and a railway are
 ### Continuous measurements
 - For the continuous measurement (see [Continuous_measurements](Dataset/Continuous_measurements)), both the head and vector probe microphones were used. In this case the cart was moving from position 1 to position 12 at a speed of 1km/h. This was also done by speaker 1 and speaker 2 separately, therefore four measurements were obtained.<br />
 
-To clarify, the microphone array consisted of six microphones, in each direction one, so for each measurement of the microphone array, there are actually six measurements. The head consists of two microphones, one for the left and one for the right ear, so for every measurement for the head, there are actually two measurements.<br />
 Be aware that the microphone array and head are placed above eachother, for visualisation reasons they are placed in front of eachother.
 
 <!-- ![Screenshot](./images/measurement_setup.jpg | width=100) -->
